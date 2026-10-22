@@ -1,0 +1,91 @@
+<UserControl x:Class="TiViewer.Views.MetadataPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             d:DesignHeight="450" d:DesignWidth="260">
+
+    <Border Background="#1a1d24" CornerRadius="14" Padding="16">
+        <StackPanel>
+            <TextBlock Text="EXIF Metadata"
+                       Foreground="#f4f7fb"
+                       FontSize="22"
+                       FontWeight="SemiBold"/>
+
+            <Border Height="1" Background="#2d3342" Margin="0,12,0,10"/>
+
+            <Grid Margin="0,0,0,8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="110"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Camera" Foreground="#8ea2bc" />
+                <TextBlock Grid.Column="1" Text="{Binding CameraModel}" Foreground="#f4f7fb" TextWrapping="Wrap"/>
+            </Grid>
+
+            <Grid Margin="0,0,0,8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="110"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Lens" Foreground="#8ea2bc" />
+                <TextBlock Grid.Column="1" Text="{Binding LensModel}" Foreground="#f4f7fb" TextWrapping="Wrap"/>
+            </Grid>
+
+            <Grid Margin="0,0,0,8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="110"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="ISO" Foreground="#8ea2bc" />
+                <TextBlock Grid.Column="1" Text="{Binding Iso}" Foreground="#f4f7fb"/>
+            </Grid>
+
+            <Grid Margin="0,0,0,8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="110"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Shutter" Foreground="#8ea2bc" />
+                <TextBlock Grid.Column="1" Text="{Binding ShutterSpeed}" Foreground="#f4f7fb"/>
+            </Grid>
+
+            <Grid Margin="0,0,0,8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="110"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Aperture" Foreground="#8ea2bc" />
+                <TextBlock Grid.Column="1" Text="{Binding Aperture}" Foreground="#f4f7fb"/>
+            </Grid>
+
+            <Grid Margin="0,0,0,8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="110"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Date" Foreground="#8ea2bc" />
+                <TextBlock Grid.Column="1" Text="{Binding DateTaken}" Foreground="#f4f7fb" TextWrapping="Wrap"/>
+            </Grid>
+
+            <Grid Margin="0,0,0,8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="110"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Resolution" Foreground="#8ea2bc" />
+                <TextBlock Grid.Column="1" Text="{Binding Resolution}" Foreground="#f4f7fb"/>
+            </Grid>
+
+            <Grid Margin="0,0,0,8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="110"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Size" Foreground="#8ea2bc" />
+                <TextBlock Grid.Column="1" Text="{Binding FileSizeKB}" Foreground="#f4f7fb"/>
+            </Grid>
+        </StackPanel>
+    </Border>
+</UserControl>
